@@ -135,7 +135,7 @@ body{
   font-size: 0.875rem; /* 14px */
 }
 
-.promotion__restart{
+.promotion__description-restart{
   display: block;
 }
 
@@ -254,7 +254,8 @@ body{
   max-width: 37.5rem; /* 600px */
 }
 
-.media-tv .card__thumbnail--bg{
+.media-tv .card__thumbnail--bg,
+.multi-device .card__thumbnail--bg {
   position: relative;
   z-index: 10;
 }
@@ -322,6 +323,7 @@ body{
 }
 
 .multi-device{
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   max-width: 37.5rem; /* 600px */
