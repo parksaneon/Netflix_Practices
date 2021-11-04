@@ -1,0 +1,166 @@
+:root{
+  --black: #010101;
+  --white: #fefefe;
+  --red: #e50914;
+  --gray: #c8c8c8;
+}
+
+/* 스크린 리더  */
+.sr-only{
+  overflow: hidden;
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/* 스타일 초기화 */
+body *, body *::before, body *::after{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+/* 반응형 이미지 */
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+.responsive{
+  max-width: 100%;
+  height: auto;
+}
+
+.responsive-full{
+  width: 100%;
+  height: auto;
+}
+
+
+body{
+  background: var(--black) url(../assets/images/hero-bg-mobile.png) no-repeat 50% 0;
+  color: var(--white);
+  font-family: 'Spoqa Han Sans Neo', sans-serif;
+  font-weight: 100;
+}
+
+/* 헤더 */
+.header{
+  height: 5rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+/* 로고 */
+.header__title{
+  margin-right: auto;
+}
+
+.logo{
+  display: block;
+  width: 5rem;
+  padding: 0.5rem 0;
+}
+
+/* 언어 선택 */
+.select-language{
+  border: 1px solid var(--gray);
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  position: relative;
+}
+
+.select-language__select{
+  appearance: none;
+  background: transparent;
+  position: relative;
+  z-index: 10;
+  padding: 0.25rem 1.375rem;
+  font-size: 0.75rem;
+  color: var(--gray);
+}
+/* 아이콘 */
+.icon-global, .icon-triangle{
+  position: absolute;
+  width: 0.625rem;
+  height: 0.625rem;
+}
+
+.icon-global{
+  left: 0.4375rem;
+}
+
+.icon-triangle{
+  right: 0.4375rem;
+}
+
+/* 로그인 버튼 */
+.button{
+  font-size: 12px;
+  padding: 6px 20px;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 3px;
+}
+
+.button-fill{
+  background: var(--red);
+}
+
+.link-login{
+  margin-left: 12px;
+}
+
+/* 데스크탑 스타일 */
+@media (min-width: 950px){
+  body{
+    background-image: url(../assets/images/hero-bg-desktop.png);
+  }
+
+  .header{
+    height: 8.75rem;
+  }
+
+  .logo{
+    width: 8.75rem;
+    padding: 2.5rem 1.25rem;
+  }
+
+  .select-language__select{
+    font-size: 1rem;
+    padding: 0.5rem 2.0625rem;
+  }
+
+  .icon-global, .icon-triangle{
+    width: 0.9375rem;
+    height: 0.9375rem;
+  }
+
+  .icon-global{
+    left: 0.925rem;
+  }
+  
+  .icon-triangle{
+    right: 0.925rem;
+  }
+
+  .button{
+    font-size: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .link-login{
+    margin-left: 40px;
+  }
+}
